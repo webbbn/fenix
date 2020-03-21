@@ -95,7 +95,7 @@ build_linux() {
     if [ ! -d linux/.git ]; then
         echo "Linux repository does not exist, clone linux repository('$LINUX_GIT_BRANCH') from '$LINUX_SOURCE_URL'..."
         ## Clone linux from Khadas GitHub
-        git clone --depth 1 $LINUX_SOURCE_URL -b $LINUX_GIT_BRANCH
+        git clone --depth 1 $LINUX_SOURCE_URL -b $LINUX_GIT_BRANCH linux
         [ $? != 0 ] && error_msg "Failed to clone 'linux'" && return -1
     fi
 
